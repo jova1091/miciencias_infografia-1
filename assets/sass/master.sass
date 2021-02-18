@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/** Variables de fuente **/
+$font-family:   'Poppins', sans-serif;
+$font-size:     1em;
+
+/** Varables de color **/
+$negro:     #272b31;
+$blanco:    #ffffff;
+$rojo:      #e7514f;
+$azul:      #5f9eb5;
+$amarillo:  #fd893b;
+
+/** Estilos Generales **/
+body {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: 400;
+    color: $blanco;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.img-fluid {
+    min-width: 100%;
+}
+
+.modal {
+    color: $negro;
+}
+
+/** Estilos Banner **/
+.banner-text {
+    position: relative;
+
+    p {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1em;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: calc( 2.7em + 1vw );
+    }
+}
+
+/** Estilos particulas **/
+#particles-js{
+    position: relative;
+
+    img,svg {
+        z-index: 1000;
+        position: relative;
+    } 
+}
+
+canvas.particles-js-canvas-el {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+/** Estilos Contenedor **/
+.content-bck {
+    background-image: url('../img/fondo.png');
+    background-repeat: repeat;
+    background-size: cover;
+    background-color: #1b1c1d;
+    animation: bck-animated 100s linear infinite;
+}
+
+@keyframes bck-animated {
+    0% {
+        background-position: 0 0;
+    }
+        
+    100%{
+        background-position: 0 2219px;
+    }
+}
+        
+
+/** Estilos bibliografia **/
+.bibliography {
+    color: $negro;
+
+    h4 {
+        color: $rojo;
+    }
+
+    p {
+        height: 100%;
+
+        &.decored {
+            padding-left: 2em;
+            border-left: 4px solid $rojo;    
+        }
+    }
+}
+
+/** Media Queries **/
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) { 
+    .banner-text {
+        p {
+            font-size: calc( 1.7em + 1vw );
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+    .banner-text {
+        p {
+            font-size: calc( 1em + 1vw );
+        }
+    }
+}
