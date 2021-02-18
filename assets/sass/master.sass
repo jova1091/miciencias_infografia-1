@@ -35,6 +35,25 @@ body {
     color: $negro;
 }
 
+.text-color-red {
+    color: $rojo;
+}
+
+.btn-danger {
+    background-color: $rojo;
+    border-color: $rojo;
+    border-radius: 25px;
+}
+
+.btn-close {
+    float: right;
+    border-radius: 50%;
+    border: 2px solid $rojo;
+    padding: 8px;
+    margin-right: -25px;
+    margin-top: -25px;
+}
+
 /** Estilos Banner **/
 .banner-text {
     position: relative;
@@ -60,8 +79,9 @@ body {
     position: relative;
 
     img,svg {
-        z-index: 1000;
+        width: 99%;
         position: relative;
+        z-index: 1000;
     } 
 }
 
@@ -129,5 +149,11 @@ canvas.particles-js-canvas-el {
         p {
             font-size: calc( 1em + 1vw );
         }
+    }
+
+    #particles-js {
+        img,svg {
+            width: 95% !important;
+        } 
     }
 }
