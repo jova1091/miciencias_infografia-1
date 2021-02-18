@@ -1,4 +1,4 @@
-/* $(window).scroll(function () {
+$(window).scroll(function () {
 
     $('.img').each(function(){
         var target = $(this),windowHeight = $(window).height();
@@ -14,13 +14,13 @@
             }
         }
     });
-}); */
+});
 
-$(document).ready(function(){
+/* $(document).ready(function(){
     $('.img').each(function(){
         $(this).removeClass('hide')
     })
-})
+}) */
 
 function inView(element, fullHeightInView) {
     var $element = $(element);
