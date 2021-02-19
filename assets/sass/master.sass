@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /** Variables de fuente **/
-$font-family:   'Poppins', sans-serif;
-$font-size:     1em;
+$font-family: 'Poppins',
+sans-serif;
+$font-size: 1em;
 
 /** Varables de color **/
-$negro:     #272b31;
-$blanco:    #ffffff;
-$rojo:      #e7514f;
-$azul:      #5f9eb5;
-$amarillo:  #fd893b;
+$negro: #272b31;
+$blanco: #ffffff;
+$rojo: #e7514f;
+$azul: #5f9eb5;
+$amarillo: #fd893b;
 
 /** Estilos Generales **/
 body {
@@ -70,19 +71,20 @@ body {
         padding: 0 1em;
         text-transform: uppercase;
         font-weight: 700;
-        font-size: calc( 2.7em + 1vw );
+        font-size: calc(2.7em + 1vw);
     }
 }
 
 /** Estilos particulas **/
-#particles-js{
+#particles-js {
     position: relative;
 
-    img,svg {
+    img,
+    svg {
         width: 99%;
         position: relative;
         z-index: 1000;
-    } 
+    }
 }
 
 canvas.particles-js-canvas-el {
@@ -107,12 +109,48 @@ canvas.particles-js-canvas-el {
     0% {
         background-position: 0 0;
     }
-        
-    100%{
+
+    100% {
         background-position: 0 2219px;
     }
 }
-        
+
+
+.lines-animation {
+    stroke-linecap: round;
+    stroke-width: 2;
+    stroke-dasharray: 50;
+    animation: trazar 4s linear infinite;
+} 
+
+.line1 {
+    stroke: $azul;
+}
+
+.line2 {
+    stroke: $amarillo;
+}
+
+.line3 {
+    stroke: $rojo;
+}
+
+
+@keyframes trazar {
+    0% {
+        stroke-dashoffset: 100;
+    }
+    
+    50% {
+        stroke-dashoffset: 50;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+
 
 /** Estilos bibliografia **/
 .bibliography {
@@ -127,18 +165,17 @@ canvas.particles-js-canvas-el {
 
         &.decored {
             padding-left: 2em;
-            border-left: 4px solid $rojo;    
+            border-left: 4px solid $rojo;
         }
     }
 }
 
 /** Media Queries **/
-
 // Medium devices (tablets, 768px and up)
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
     .banner-text {
         p {
-            font-size: calc( 1.7em + 1vw );
+            font-size: calc(1.7em + 1vw);
         }
     }
 }
@@ -147,13 +184,15 @@ canvas.particles-js-canvas-el {
 @media (max-width: 576px) {
     .banner-text {
         p {
-            font-size: calc( 1em + 1vw );
+            font-size: calc(1em + 1vw);
         }
     }
 
     #particles-js {
-        img,svg {
+
+        img,
+        svg {
             width: 95% !important;
-        } 
+        }
     }
 }
