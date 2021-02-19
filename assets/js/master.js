@@ -3,8 +3,6 @@ $(window).scroll(function () {
     $('.img').each(function(){
         var target = $(this),windowHeight = $(window).height();
         
-        console.log(target)
-        
         //Si el elemento es visible al realizar scroll
         if (inView(target)) {
             var offset = getViewportOffset(target);
