@@ -50,10 +50,38 @@ hr {
 .text-color-red {
     color: $rojo;
 }
+.text-color-blue {
+    color: $azul;
+}
+.text-color-yellow {
+    color: $amarillo;
+}
+.text-color-white {
+    color: $blanco;
+}
+.text-color-black {
+    color: $negro;
+}
+
+.icon-vineta {
+    width: 90px;
+    height: 90px;
+}
+
+.icon-vineta-color {
+    width: 60px;
+    height: 60px;
+}
 
 .btn-danger {
     background-color: $rojo;
     border-color: $rojo;
+    border-radius: 25px;
+}
+
+.btn-blue {
+    background-color: $azul;
+    border-color: $azul;
     border-radius: 25px;
 }
 
@@ -90,11 +118,16 @@ hr {
 #particles-js {
     position: relative;
 
-    img,
-    svg {
+    >img,
+    >svg {
         width: 99%;
         position: relative;
         z-index: 1000;
+    }
+
+    >div {
+        position: relative;
+        z-index: 1000;        
     }
 }
 
@@ -114,6 +147,7 @@ canvas.particles-js-canvas-el {
     background-size: cover;
     background-color: #1b1c1d;
     animation: bck-animated 100s linear infinite;
+    z-index: 1;
 }
 
 @keyframes bck-animated {
@@ -161,7 +195,36 @@ canvas.particles-js-canvas-el {
     }
 }
 
+.tipos {
+    li {
+        &::marker {
+            color: $rojo !important;
+        }
+    }
+}
 
+.no-list {
+    list-style: none;
+}
+
+.nota {
+    background: $amarillo;
+    color: $blanco;
+    border-radius: 20px;
+    position: relative;
+
+    h2 {
+        border-top: 1px solid $blanco;    
+        border-bottom: 1px solid $blanco;    
+    }
+
+    >img {
+        position: relative;
+        float: right;
+        margin-top: 0rem;
+        margin-right: -3rem;
+    }
+}
 
 /** Estilos bibliografia **/
 .bibliography {
@@ -200,9 +263,8 @@ canvas.particles-js-canvas-el {
     }
 
     #particles-js {
-
-        img,
-        svg {
+        >img,
+        >svg {
             width: 95% !important;
         }
     }
