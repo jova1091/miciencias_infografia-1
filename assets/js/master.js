@@ -1,6 +1,6 @@
 $(window).scroll(function () {
 
-    $('.img').each(function(){
+    /* $('.img').each(function(){
         var target = $(this),windowHeight = $(window).height();
         
         //Si el elemento es visible al realizar scroll
@@ -11,7 +11,7 @@ $(window).scroll(function () {
                 $(target).removeClass('hide').addClass('animate__zoomInDown');
             }
         }
-    });
+    }); */
 });
 
 function inView(element, fullHeightInView) {
